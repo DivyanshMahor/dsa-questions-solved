@@ -7,7 +7,7 @@ class Solution {
 
         while(j<arr){
 
-            if(nums[i] == nums[j] ){
+            if(nums[i] ==  nums[j] ){
                 j++;
             }else
             {
