@@ -13,6 +13,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0088-merge-sorted-array](https://github.com/DivyanshMahor/SABKUCH/tree/master/0088-merge-sorted-array) |
 | [0167-two-sum-ii-input-array-is-sorted](https://github.com/DivyanshMahor/SABKUCH/tree/master/0167-two-sum-ii-input-array-is-sorted) |
 | [0977-squares-of-a-sorted-array](https://github.com/DivyanshMahor/SABKUCH/tree/master/0977-squares-of-a-sorted-array) |
+| [2281-sum-of-total-strength-of-wizards](https://github.com/DivyanshMahor/SABKUCH/tree/master/2281-sum-of-total-strength-of-wizards) |
 ## Two Pointers
 |  |
 | ------- |
@@ -35,4 +36,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0075-sort-colors](https://github.com/DivyanshMahor/SABKUCH/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/DivyanshMahor/SABKUCH/tree/master/0088-merge-sorted-array) |
 | [0977-squares-of-a-sorted-array](https://github.com/DivyanshMahor/SABKUCH/tree/master/0977-squares-of-a-sorted-array) |
+## Stack
+|  |
+| ------- |
+| [2281-sum-of-total-strength-of-wizards](https://github.com/DivyanshMahor/SABKUCH/tree/master/2281-sum-of-total-strength-of-wizards) |
+## Monotonic Stack
+|  |
+| ------- |
+| [2281-sum-of-total-strength-of-wizards](https://github.com/DivyanshMahor/SABKUCH/tree/master/2281-sum-of-total-strength-of-wizards) |
+## Prefix Sum
+|  |
+| ------- |
+| [2281-sum-of-total-strength-of-wizards](https://github.com/DivyanshMahor/SABKUCH/tree/master/2281-sum-of-total-strength-of-wizards) |
 <!---LeetCode Topics End-->
