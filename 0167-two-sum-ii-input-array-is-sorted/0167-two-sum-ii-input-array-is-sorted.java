@@ -4,18 +4,23 @@ class Solution {
         int left = 0;
         int right = numbers.length-1;
 
-        while(left<right){
-            int sum = numbers[left]+numbers[right];
+        while(left < right){
 
-            if(sum == target){
-                return new int[] {left+1,right+1};
+            int sum = numbers[left] + numbers[right];
+
+            if(sum > target){
+                right--;
             }
-            else if(sum<target){
+
+            else if(sum < target){
                 left++;
             }
-            else{
-            right--;
 
-            }
-        }return new int[0];
-}}
+            else // best condition -> sum == target
+
+            return new int[] {left+1, right+1};
+        }
+        
+        return new int[0];
+    }
+}
