@@ -1,31 +1,35 @@
-import java.util.HashMap;
-import java.util.Map;
-
 class Solution {
     public int totalFruit(int[] fruits) {
-        Map<Integer, Integer> frequency = new HashMap<>();
 
+        Map<Integer, Integer> basket = new HashMap<>();
         int left = 0;
-        int longest = 0;
+        int maxLen = 0;
+        int right;
+        for (right = 0; right < fruits.length; right++) {
 
-        for (int right = 0; right < fruits.length; right++) {
-            frequency.merge(fruits[right], 1, Integer::sum);
+            int fruit = fruits[right];
+            basket.put(fruit, basket.getOrDefault(fruit, 0) + 1);
 
-            while (frequency.size() > 2) {
-                int fruit = fruits[left];
+            while (basket.size() > 2) {
 
-                frequency.merge(fruit, -1, Integer::sum);
+                int outFruit = fruits[left];
+                basket.put(outFruit, basket.getOrDefault(outFruit, 0) - 1);
 
-                if (frequency.get(fruit) == 0) {
-                    frequency.remove(fruit);
+                if (basket.get(outFruit) == 0) {
+
+                    basket.remove(outFruit);
                 }
 
                 left++;
             }
 
-            longest = Math.max(longest, right - left + 1);
+           
+
+                maxLen = Math.max(maxLen, right - left + 1);
+            
+
         }
 
-        return longest;
+        return maxLen;
     }
 }
