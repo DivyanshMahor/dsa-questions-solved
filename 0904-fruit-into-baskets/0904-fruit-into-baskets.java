@@ -22,9 +22,7 @@ class Solution {
 
                 left++;
             }
-
-           
-
+            
                 maxLen = Math.max(maxLen, right - left + 1);
             
 
