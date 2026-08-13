@@ -1,33 +1,34 @@
 class Solution {
     public int totalFruit(int[] fruits) {
-
         Map<Integer, Integer> basket = new HashMap<>();
-        int left = 0;
-        int maxLen = 0;
-        int right;
-        for (right = 0; right < fruits.length; right++) {
 
-            int fruit = fruits[right];
-            basket.put(fruit, basket.getOrDefault(fruit, 0) + 1);
+        int windowEnd;
+        int windowStart = 0;
+        int maxCollectedFruits = 0;
 
-            while (basket.size() > 2) {
+        for(windowEnd = 0; windowEnd < fruits.length; windowEnd++){
 
-                int outFruit = fruits[left];
-                basket.put(outFruit, basket.getOrDefault(outFruit, 0) - 1);
+            int incomingFruits = fruits[windowEnd];
 
-                if (basket.get(outFruit) == 0) {
+            basket.put(incomingFruits, basket.getOrDefault(incomingFruits, 0 )+1);
 
-                    basket.remove(outFruit);
+            while( basket.size() > 2 ){
+
+                int outcomingFruits = fruits[windowStart];
+
+                basket.put(outcomingFruits, basket.getOrDefault(outcomingFruits, 0)-1);
+
+                if(basket.get(outcomingFruits) == 0){
+                    basket.remove(outcomingFruits);
                 }
+                windowStart++;
+            } 
 
-                left++;
-            }
-            
-                maxLen = Math.max(maxLen, right - left + 1);
+        
+                maxCollectedFruits = Math.max(maxCollectedFruits, windowEnd - windowStart + 1 );
             
 
         }
-
-        return maxLen;
+        return maxCollectedFruits;
     }
 }
