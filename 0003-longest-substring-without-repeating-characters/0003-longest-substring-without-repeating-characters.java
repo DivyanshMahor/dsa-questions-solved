@@ -4,6 +4,7 @@ class Solution {
         int winStart = 0;
         int longest = 0;
         int winEnd;
+        
 
         Map<Character, Integer> map = new HashMap<>();
 
