@@ -11,6 +11,7 @@ class Solution {
                 nums[i+1] = nums[j];
                 k++;
                 i++;
+                j++;
                 
             }else{
              
