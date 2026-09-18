@@ -1,25 +1,20 @@
 class Solution {
     public int removeDuplicates(int[] nums) {
-        
-        int i = 0;
-        int j = 1;
-        int k = 1;
 
-        while(j < nums.length){
+        int left = 0;
+        int unique = 1;
+        int checker = 1;
 
-            if(nums[i] != nums[j]){
-                nums[i+1] = nums[j];
-                k++;
-                i++;
-                j++;
-                
+        while(checker < nums.length){
+
+            if(nums[left] != nums[checker] ){
+                nums[left+1] = nums[checker];
+                unique++;
+                left++;
             }else{
-             
-                j++;
+                checker++;
             }
-            
         }
-          return k;
+        return unique;
     }
-  
 }
