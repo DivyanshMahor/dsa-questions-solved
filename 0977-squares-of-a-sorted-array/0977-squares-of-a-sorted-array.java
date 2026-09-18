@@ -1,32 +1,32 @@
 class Solution {
     public int[] sortedSquares(int[] nums) {
-int n = nums.length;
-        int[] arr = new int[n];
+
+        int size = nums.length;
+        int[] arr = new int[size];
+        int fit = arr.length-1;
 
         int left = 0;
-        int right = arr.length-1;
-        int fill = arr.length-1;
+        int right = nums.length-1;
 
         while(left <= right){
 
-            int sqleft = nums[left] * nums[left];
-            int sqright = nums[right] * nums[right];
+            int leftsq = nums[left] * nums[left];
+            int rightsq = nums[right] * nums[right];
 
-            if(sqleft > sqright){ 
-
-                arr[fill] = sqleft;
-                fill--;
+            if(leftsq >= rightsq){
+                arr[fit] = leftsq;
                 left++;
+                fit--;
             }
-            else{
-                arr[fill] = sqright;
-                fill--;
+            else if (leftsq <= rightsq){
+                arr[fit] = rightsq;
                 right--;
+                fit--;
             }
-            
-        
         }
-        return arr;
+
         
+return arr;
+
     }
 }
